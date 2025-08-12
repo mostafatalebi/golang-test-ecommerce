@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "2abf3e5f-5cce-407d-a890-8c5b97efadcd",
+		"name": "Test-Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2090265"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8010/greet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8010/greet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"greet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE http://localhost:8010/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8010/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAT http://localhost:8010/products?category=name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8010/products?category=mobile-phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "mobile-phones"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL http://localhost:8010/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8010/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVE http://localhost:8010/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 3,\n    \"title\" : \"IPhone\",\n    \"description\" : \"a smart phone made by Apple\",\n    \"image\" : \"https://m.media-amazon.com/images/I/51CJE8vrvIL._UF894%2C1000_QL80_.jpg\",\n    \"rating\" : {\n        \"rate\" : 4.8\n    },\n    \"price\" : 599.0,\n    \"category\" : \"mobile-phones\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
