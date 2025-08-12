@@ -24,7 +24,8 @@
 					"path": [
 						"greet"
 					]
-				}
+				},
+				"description": "## Greet Endpoint\n\nThis endpoint is designed to provide a friendly greeting to the requester.\n\n### Request\n\n- **Method**: GET\n    \n- **URL**: `http://localhost:8010/greet`\n    \n- **Request Body**: No request body is required for this endpoint.\n    \n\n### Response\n\n- **Status Code**: 200\n    \n- **Content-Type**: text/plain\n    \n- **Response Body**: The response will contain a plain text message greeting the requester, such as \"Hello requester!\".\n    \n\nThis endpoint is useful for testing connectivity and ensuring that the server is operational."
 			},
 			"response": []
 		},
@@ -47,7 +48,8 @@
 						"products",
 						"1"
 					]
-				}
+				},
+				"description": "## Get Product by ID\n\nReturns a single product by the ID given in the URL.\n\n### Request\n\n- **Method:** GET\n    \n- **URL:** `http://localhost:8010/products/{id}`\n    \n\n#### Path Parameters\n\n- `id` (integer): product's ID.\n    \n\n### Response\n\nUpon a successful request (HTTP Status 200), the server responds with a JSON object containing the following fields:\n\n- `id` (integer): The unique identifier of the product.\n    \n- `title` (string): The title or name of the product.\n    \n- `description` (string): A brief description of the product.\n    \n- `image` (string): A URL or path to the product image.\n    \n- `price` (number): The price of the product.\n    \n- `category` (string): The category under which the product falls.\n    \n- `rating` (object): An object containing the product's rating information.\n    \n    - `rate` (number): The average rating score of the product.\n        \n- `createdAt` (integer): A timestamp indicating when the product was created.\n    \n- `updatedAt` (integer): A timestamp indicating when the product was last updated.\n    \n\n### Example Response\n\n``` json\n{\n    \"id\": 1,\n    \"title\": \"IPhone Edited\",\n    \"description\": \"a smart phone made by Apple\",\n    \"image\": \"https://m.media-amazon.com/images/I/51CJE8vrvIL._UF894,1000_QL80_.jpg\",\n    \"price\": 599,\n    \"category\": \"mobile-phones\",\n    \"rating\": {\n        \"rate\": 4.8\n    },\n    \"createdAt\": 1754989985,\n    \"updatedAt\": 1754989985\n}\n\n ```\n\n### Usage\n\nTo use this endpoint effectively, ensure that you replace `{id}` in the URL with the actual product ID you want to query. The response is the full product JSON."
 			},
 			"response": []
 		},
@@ -75,7 +77,8 @@
 							"value": "mobile-phones"
 						}
 					]
-				}
+				},
+				"description": "## Get Products by Category\n\nThis endpoint retrieves a list of products filtered by a specific category.\n\n### Request\n\n- **Method**: `GET`\n    \n- **Endpoint**: `http://localhost:8010/products`\n    \n- **Query Parameters**:\n    \n    - `category` (string): The category of products to filter. In this case, the value is `mobile-phones`.\n        \n\n### Response\n\n- **Status Code**: `200 OK`\n    \n- **Content-Type**: `application/json`\n    \n- **Response Format**: An array of product objects, each containing the following fields:\n    \n    - `id` (integer): The unique identifier for the product.\n        \n    - `title` (string): The name of the product.\n        \n    - `description` (string): A brief description of the product.\n        \n    - `image` (string): A URL to the product image.\n        \n    - `price` (number): The price of the product.\n        \n    - `category` (string): The category to which the product belongs.\n        \n    - `rating` (object): An object containing the rating details.\n        \n        - `rate` (number): The average rating of the product.\n            \n    - `createdAt` (integer): The timestamp when the product was created.\n        \n    - `updatedAt` (integer): The timestamp when the product was last updated."
 			},
 			"response": []
 		},
@@ -97,7 +100,8 @@
 					"path": [
 						"products"
 					]
-				}
+				},
+				"description": "### GET /products\n\nReturns the list of all products.\n\n#### Request\n\n- **Method**: GET\n    \n- **URL**: `http://localhost:8010/products`\n    \n- **Request Body**: This endpoint does not require a request body.\n    \n\n#### Response\n\n- **Status Code**: 200 OK\n    \n- **Content-Type**: application/json\n    \n- **Response Body Structure**: The response is a JSON array containing product objects. Each product object includes the following fields:\n    \n    - `id` (integer): The unique identifier for the product.\n        \n    - `title` (string): The title of the product.\n        \n    - `description` (string): A brief description of the product.\n        \n    - `image` (string): A URL or path to the product image.\n        \n    - `price` (number): The price of the product.\n        \n    - `category` (string): The category to which the product belongs.\n        \n    - `rating` (object): An object containing the product's rating information:\n        \n        - `rate` (number): The rating score of the product.\n            \n    - `createdAt` (integer): A timestamp indicating when the product was created.\n        \n    - `updatedAt` (integer): A timestamp indicating when the product was last updated."
 			},
 			"response": []
 		},
@@ -111,7 +115,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\" : 3,\n    \"title\" : \"IPhone\",\n    \"description\" : \"a smart phone made by Apple\",\n    \"image\" : \"https://m.media-amazon.com/images/I/51CJE8vrvIL._UF894%2C1000_QL80_.jpg\",\n    \"rating\" : {\n        \"rate\" : 4.8\n    },\n    \"price\" : 599.0,\n    \"category\" : \"mobile-phones\"\n}",
+					"raw": "{\n    \"id\" : 3,\n    \"title\" : \"IPhone Edited\",\n    \"description\" : \"a smart phone made by Apple\",\n    \"image\" : \"https://m.media-amazon.com/images/I/51CJE8vrvIL._UF894%2C1000_QL80_.jpg\",\n    \"rating\" : {\n        \"rate\" : 4.8\n    },\n    \"price\" : 599.0,\n    \"category\" : \"mobile-phones\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,7 +132,8 @@
 					"path": [
 						"products"
 					]
-				}
+				},
+				"description": "### Endpoint: Creates/Updates a New Product\n\nSaves a new or modification to an existing product. ID is immutable for update actions. CreatedAt and UpdatedAt fields are systematically handled and cannot be changed through API.\n\n#### Request\n\n- **Method**: POST\n    \n- **URL**: `http://localhost:8010/products`\n    \n- **Content-Type**: application/json\n    \n\n**Request Body Parameters**:\n\n| Parameter | Type | Description |\n| --- | --- | --- |\n| `title` | string | The name of the product. |\n| `description` | string | A brief description of the product. |\n| `image` | string | URL of the product image. |\n| `rating` | object | An object containing the product rating. |\n| `rating.rate` | number | The rating value of the product (e.g., 4.8). |\n| `price` | number | The price of the product. |\n| `category` | string | The category under which the product falls. |\n\n#### Response\n\nUpon successful creation of the product, the response will return a JSON object with the following structure:\n\n- **Status**: 200\n    \n- **Content-Type**: application/json\n    \n\n**Response Body Structure**:\n\n| Parameter | Type | Description |\n| --- | --- | --- |\n| `id` | number | The unique identifier assigned to the created product. |\n| `title` | string | The name of the product. |\n| `description` | string | A brief description of the product. |\n| `image` | string | URL of the product image. |\n| `price` | number | The price of the product. |\n| `category` | string | The category under which the product falls. |\n| `rating` | object | An object containing the product rating. |\n| `rating.rate` | number | The rating value of the product. |\n| `createdAt` | number | Timestamp of when the product was created. |\n| `updatedAt` | number | Timestamp of when the product was last updated. |"
 			},
 			"response": []
 		}
