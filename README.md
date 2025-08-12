@@ -5,9 +5,9 @@ This project is for testing and demonstration purposes. It uses Golang.
 ## Usage
 Simply run the following command to run the server on port `8010`.
 The command needs to run in the project's root. 
-`golang
+```golang
 go mod tidy && go run .
-`
+```
 
 ### API
 The following endpoints are exposed:
